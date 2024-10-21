@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PARALLAX|SCROLLING</title>
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font awsome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <div class="container">
+
+       <div class="sub-container">
+            <section>
+                <img src="./img/sky.png" id="sky">
+                <img src="./img/moon.png" id="moon">
+                <img src="./img/mountain-removebg-preview.png" id="mountain">
+                <img src="./img/road.png" id="road">
+                <h1 id="text">MOON <span>SHOW</span></h1>
+
+            </section>
+       </div>
+
+       <div class="title">
+        <h2 id="heading">Parallax Scrolling</h2>
+        <p class="paragraph">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti veritatis aperiam, reprehenderit molestiae unde id blanditiis cumque minus rem consequatur molestias tempora eaque praesentium earum porro illum beatae expedita adipisci Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus explicabo eos velit asperiores aliquid hic temporibus officia! Ipsam ducimus recusandae cum, vel, dignissimos ipsa modi itaque nulla placeat excepturi minus Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus necessitatibus odio quasi vero neque, similique, velit nesciunt ratione delectus exercitationem asperiores! Veniam debitis iusto earum. Omnis hic eveniet impedit nostrum.
+        </p>
+       </div>
+       
+
+       
+   </div>
+</body>
+<script>
+    let sky=document.getElementById("sky");
+    let moon=document.getElementById("moon");
+    let mountain=document.getElementById("mountain");
+    let road=document.getElementById("road");
+    let text1=document.getElementById("text");
+
+    window.addEventListener("scroll", function(){
+        var value = window.scrollY;
+
+        sky.style.top  = value * -0.5 + 'px';
+        moon.style.top  = value * 1.9 + 'px';
+        // text.style.top  = value * -1.5 + 'px'; sun rise purpose
+        text.style.top  = value * 1.5 + 'px';
+
+
+        
+        // mountain.style.top  = value * 0.15 + 'px';
+        // .style.top  = value * 1.9 + 'px';
+
+
+
+    })
+
+
+
+</script>
+</html>
